@@ -880,7 +880,7 @@ SieveAccount.prototype.setEnabledOutOfOffice = function( enabled )
             loadAll = false;
 
         function Add( account, accounts ) {
-          if( account.type != "imap" )
+          if( account.type != "imap" && account.type != "pop3" )
               return;
           sieveAccount = new SieveAccount( account.rootMsgFolder.baseMessageURI.slice( 15 ), account.key, account.prettyName );
 
